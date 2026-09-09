@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Book your trip to Petra, Jordan. Fill out our secure travel reservation form to reserve flights, hotels, and guided tours.">
+    <meta name="keywords" content="Petra Jordan booking, travel reservation form, book trip to Jordan, Wadi Musa hotel booking, Petra tour package">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏛️</text></svg>">
+    <title>Book Your Trip – Petra Escapes Reservation Form</title>
+    
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">Petra Escapes</div>
+        <nav>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#destination">Destination</a></li>
+                <li><a href="index.html#travel-info">Travel Information</a></li>
+                <li><a href="booking.html">Book Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Book Your Trip to Petra, Jordan</h1>
+        <p>Complete the form below to reserve your journey. Fields marked as required must be filled before submitting.</p>
+
+        <!-- Booking Form -->
+        <form action="https://example.com/submit-booking" method="post" target="_blank" autocomplete="on">
+
+            <!-- 1. Personal Information -->
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <label for="fullname">Full Name:</label><br>
+                <input type="text" id="fullname" name="fullname" maxlength="50" placeholder="e.g. Layla Ahmad" required>
+                <br><br>
+
+                <label for="email">Email Address:</label><br>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                <br><br>
+
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" minlength="8" placeholder="At least 8 characters" required>
+                <br><br>
+
+                <label for="phone">Phone Number:</label><br>
+                <input type="tel" id="phone" name="phone" pattern="[0-9+ ]{7,15}" placeholder="+962 7X XXX XXXX" required>
+                <br><br>
+
+                <label for="dob">Date of Birth:</label><br>
+                <input type="date" id="dob" name="dob" required>
+                <br><br>
+            </fieldset>
+
+            <!-- 2. Travel Details & Selection Controls -->
+            <fieldset>
+                <legend>Travel Details</legend>
+
+                <label for="departure-city">Departure City:</label><br>
+                <input type="text" id="departure-city" name="departure-city" size="20" placeholder="e.g. Amman" required>
+                <br><br>
+
+                <label for="destination">Destination:</label><br>
+                <select id="destination" name="destination" required>
+                    <option value="" disabled selected>-- Select a Destination --</option>
+                    <optgroup label="Europe">
+                        <option value="paris">Paris, France</option>
+                        <option value="rome">Rome, Italy</option>
+                        <option value="london">London, United Kingdom</option>
+                    </optgroup>
+                    <optgroup label="Asia">
+                        <option value="tokyo">Tokyo, Japan</option>
+                        <option value="bangkok">Bangkok, Thailand</option>
+                        <option value="bali">Bali, Indonesia</option>
+                    </optgroup>
+                    <optgroup label="Middle East">
+                        <option value="petra">Petra, Jordan</option>
+                        <option value="dubai">Dubai, UAE</option>
+                        <option value="cairo">Cairo, Egypt</option>
+                        <option value="beirut">Beirut, Lebanon</option>
+                    </optgroup>
+                </select>
+                <br><br>
+
+                <label for="travel-date">Travel Date:</label><br>
+                <input type="date" id="travel-date" name="travel-date" required>
+                <br><br>
+
+                <label for="travelers">Number of Travelers:</label><br>
+                <input type="number" id="travelers" name="travelers" min="1" max="10" value="2" required>
+                <br><br>
+
+                <p>Travel Class:</p>
+                <input type="radio" id="economy" name="travel-class" value="economy" checked>
+                <label for="economy">Economy</label>
+
+                <input type="radio" id="business" name="travel-class" value="business">
+                <label for="business">Business</label>
+
+                <input type="radio" id="first-class" name="travel-class" value="first-class">
+                <label for="first-class">First Class</label>
+                <br><br>
+
+                <p>Additional Services:</p>
+                <input type="checkbox" id="airport-transfer" name="services" value="airport-transfer">
+                <label for="airport-transfer">Airport Transfer</label>
+
+                <input type="checkbox" id="hotel-reservation" name="services" value="hotel-reservation">
+                <label for="hotel-reservation">Hotel Reservation</label>
+
+                <input type="checkbox" id="travel-insurance" name="services" value="travel-insurance">
+                <label for="travel-insurance">Travel Insurance</label>
+
+                <input type="checkbox" id="guided-tour" name="services" value="guided-tour">
+                <label for="guided-tour">Guided Tour</label>
+                <br><br>
+            </fieldset>
+
+            <!-- 3. Advanced Form Features & Attributes -->
+            <fieldset>
+                <legend>Additional Preferences</legend>
+
+                <label for="special-requests">Special Requests:</label><br>
+                <textarea id="special-requests" name="special-requests" rows="4" cols="40" maxlength="300" placeholder="e.g. vegetarian meals, wheelchair access, early check-in..."></textarea>
+                <br><br>
+
+                <label for="documents">Upload Passport / ID (PDF, JPG, PNG):</label><br>
+                <input type="file" id="documents" name="documents" accept=".pdf,.jpg,.jpeg,.png" multiple required>
+                <br><br>
+
+                <label for="package">Preferred Package:</label><br>
+                <input type="text" id="package" name="package" list="package-options" placeholder="Start typing to search...">
+                <datalist id="package-options">
+                    <option value="Petra Explorer Package">
+                    <option value="Petra &amp; Wadi Rum Adventure">
+                    <option value="Petra Luxury Retreat">
+                    <option value="Petra Budget Tour">
+                </datalist>
+                <br><br>
+
+                <label for="booking-ref">Booking Reference:</label><br>
+                <input type="text" id="booking-ref" name="booking-ref" value="BR-2026-PET7734" readonly>
+                <br><br>
+
+                <label for="promo">Promo Discount:</label><br>
+                <input type="text" id="promo" name="promo" value="No active promo code" disabled>
+                <br><br>
+            </fieldset>
+
+            <!-- Action Buttons -->
+            <button type="submit">Confirm Booking</button>
+            <button type="reset">Clear Form</button>
+
+        </form>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p><small>&copy; 2026 Petra Escapes. All rights reserved.</small></p>
+    </footer>
+
+</body>
+</html>
